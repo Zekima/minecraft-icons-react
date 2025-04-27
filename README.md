@@ -1,8 +1,6 @@
 # minecraft-icons-react ⛏️
 
 [![NPM Version](https://img.shields.io/npm/v/minecraft-icons-react.svg)](https://www.npmjs.com/package/minecraft-icons-react)
-[![NPM Downloads](https://img.shields.io/npm/dm/minecraft-icons-react.svg)](https://www.npmjs.com/package/minecraft-icons-react)
-[![License](https://img.shields.io/npm/l/minecraft-icons-react.svg)](./LICENSE)
 
 A collection of **708** high-quality, scalable Minecraft icons (primarily blocks and items) available as easy-to-use React components.
 
