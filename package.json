@@ -12,6 +12,10 @@
     "components",
     "typescript"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zekima/minecraft-icons-react.git"
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
