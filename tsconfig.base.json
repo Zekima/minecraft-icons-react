@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "jsx": "react-jsx",
+      "target": "ES2016",
+      "declaration": true,
+      "declarationMap": true,
+      "sourceMap": true,
+      "lib": ["ESNext", "DOM"]
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist"]
+  }

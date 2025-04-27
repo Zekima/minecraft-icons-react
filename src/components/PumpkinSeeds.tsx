@@ -1,0 +1,45 @@
+import * as React from 'react';
+
+// Define a specific type for the props, extending standard SVG props
+interface PumpkinSeedsProps extends React.SVGProps<SVGSVGElement> {
+  /**
+   * Provides a human-readable title for the element that contains it.
+   * https://www.w3.org/TR/SVG-access/#Equivalent
+   */
+  title?: string;
+  /**
+   * The width of the icon. Defaults to the SVG's intrinsic width.
+   */
+   width?: string | number;
+   /**
+    * The height of the icon. Defaults to the SVG's intrinsic height.
+    */
+   height?: string | number;
+}
+
+const PumpkinSeeds: React.ForwardRefRenderFunction<SVGSVGElement, PumpkinSeedsProps> = (
+  { title, ...props },
+  ref
+) => {
+  return (
+    <svg
+      ref={ref}
+      version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" shape-rendering="crispEdges" // Inject the original attributes (width, height, viewBox, etc.)
+      {...props}    // Spread the passed-in props (allows overriding and adding new ones like className)
+    >
+      {/* Conditionally render the title for accessibility */}
+      {title ? <title>{title}</title> : null}
+      {/* Inject the inner SVG elements (rects, paths, etc.) */}
+      {/* Using dangerouslySetInnerHTML as the content is already valid SVG markup */}
+      <g dangerouslySetInnerHTML={{ __html: `<rect x="10" y="8" width="1" height="1" fill="#c8d4aa"/><rect x="11" y="8" width="1" height="1" fill="#c8d4aa"/><rect x="10" y="9" width="1" height="1" fill="#c8d4aa"/><rect x="11" y="9" width="1" height="1" fill="#c8d4aa"/><rect x="10" y="10" width="1" height="1" fill="#c8d4aa"/><rect x="11" y="10" width="1" height="1" fill="#c8d4aa"/><rect x="12" y="10" width="1" height="1" fill="#cbc68d"/><rect x="13" y="10" width="1" height="1" fill="#cbc68d"/><rect x="24" y="10" width="1" height="1" fill="#c8d4aa"/><rect x="25" y="10" width="1" height="1" fill="#c8d4aa"/><rect x="10" y="11" width="1" height="1" fill="#c8d4aa"/><rect x="11" y="11" width="1" height="1" fill="#c8d4aa"/><rect x="12" y="11" width="1" height="1" fill="#cbc68d"/><rect x="13" y="11" width="1" height="1" fill="#cbc68d"/><rect x="24" y="11" width="1" height="1" fill="#c8d4aa"/><rect x="25" y="11" width="1" height="1" fill="#c8d4aa"/><rect x="10" y="12" width="1" height="1" fill="#cbc68d"/><rect x="11" y="12" width="1" height="1" fill="#cbc68d"/><rect x="12" y="12" width="1" height="1" fill="#cab16e"/><rect x="13" y="12" width="1" height="1" fill="#cab16e"/><rect x="24" y="12" width="1" height="1" fill="#c8d4aa"/><rect x="25" y="12" width="1" height="1" fill="#c8d4aa"/><rect x="26" y="12" width="1" height="1" fill="#cbc68d"/><rect x="27" y="12" width="1" height="1" fill="#cbc68d"/><rect x="10" y="13" width="1" height="1" fill="#cbc68d"/><rect x="11" y="13" width="1" height="1" fill="#cbc68d"/><rect x="12" y="13" width="1" height="1" fill="#cab16e"/><rect x="13" y="13" width="1" height="1" fill="#cab16e"/><rect x="24" y="13" width="1" height="1" fill="#c8d4aa"/><rect x="25" y="13" width="1" height="1" fill="#c8d4aa"/><rect x="26" y="13" width="1" height="1" fill="#cbc68d"/><rect x="27" y="13" width="1" height="1" fill="#cbc68d"/><rect x="8" y="14" width="1" height="1" fill="#c8d4aa"/><rect x="9" y="14" width="1" height="1" fill="#c8d4aa"/><rect x="18" y="14" width="1" height="1" fill="#c8d4aa"/><rect x="19" y="14" width="1" height="1" fill="#c8d4aa"/><rect x="20" y="14" width="1" height="1" fill="#cbc68d"/><rect x="21" y="14" width="1" height="1" fill="#cbc68d"/><rect x="24" y="14" width="1" height="1" fill="#cbc68d"/><rect x="25" y="14" width="1" height="1" fill="#cbc68d"/><rect x="26" y="14" width="1" height="1" fill="#cab16e"/><rect x="27" y="14" width="1" height="1" fill="#cab16e"/><rect x="8" y="15" width="1" height="1" fill="#c8d4aa"/><rect x="9" y="15" width="1" height="1" fill="#c8d4aa"/><rect x="18" y="15" width="1" height="1" fill="#c8d4aa"/><rect x="19" y="15" width="1" height="1" fill="#c8d4aa"/><rect x="20" y="15" width="1" height="1" fill="#cbc68d"/><rect x="21" y="15" width="1" height="1" fill="#cbc68d"/><rect x="24" y="15" width="1" height="1" fill="#cbc68d"/><rect x="25" y="15" width="1" height="1" fill="#cbc68d"/><rect x="26" y="15" width="1" height="1" fill="#cab16e"/><rect x="27" y="15" width="1" height="1" fill="#cab16e"/><rect x="8" y="16" width="1" height="1" fill="#cbc68d"/><rect x="9" y="16" width="1" height="1" fill="#cbc68d"/><rect x="10" y="16" width="1" height="1" fill="#cbc68d"/><rect x="11" y="16" width="1" height="1" fill="#cbc68d"/><rect x="16" y="16" width="1" height="1" fill="#c8d4aa"/><rect x="17" y="16" width="1" height="1" fill="#c8d4aa"/><rect x="18" y="16" width="1" height="1" fill="#cbc68d"/><rect x="19" y="16" width="1" height="1" fill="#cbc68d"/><rect x="20" y="16" width="1" height="1" fill="#cab16e"/><rect x="21" y="16" width="1" height="1" fill="#cab16e"/><rect x="8" y="17" width="1" height="1" fill="#cbc68d"/><rect x="9" y="17" width="1" height="1" fill="#cbc68d"/><rect x="10" y="17" width="1" height="1" fill="#cbc68d"/><rect x="11" y="17" width="1" height="1" fill="#cbc68d"/><rect x="16" y="17" width="1" height="1" fill="#c8d4aa"/><rect x="17" y="17" width="1" height="1" fill="#c8d4aa"/><rect x="18" y="17" width="1" height="1" fill="#cbc68d"/><rect x="19" y="17" width="1" height="1" fill="#cbc68d"/><rect x="20" y="17" width="1" height="1" fill="#cab16e"/><rect x="21" y="17" width="1" height="1" fill="#cab16e"/><rect x="6" y="18" width="1" height="1" fill="#c8d4aa"/><rect x="7" y="18" width="1" height="1" fill="#c8d4aa"/><rect x="6" y="19" width="1" height="1" fill="#c8d4aa"/><rect x="7" y="19" width="1" height="1" fill="#c8d4aa"/><rect x="6" y="20" width="1" height="1" fill="#c8d4aa"/><rect x="7" y="20" width="1" height="1" fill="#c8d4aa"/><rect x="8" y="20" width="1" height="1" fill="#cbc68d"/><rect x="9" y="20" width="1" height="1" fill="#cbc68d"/><rect x="16" y="20" width="1" height="1" fill="#c8d4aa"/><rect x="17" y="20" width="1" height="1" fill="#c8d4aa"/><rect x="22" y="20" width="1" height="1" fill="#c8d4aa"/><rect x="23" y="20" width="1" height="1" fill="#c8d4aa"/><rect x="24" y="20" width="1" height="1" fill="#c8d4aa"/><rect x="25" y="20" width="1" height="1" fill="#c8d4aa"/><rect x="26" y="20" width="1" height="1" fill="#cbc68d"/><rect x="27" y="20" width="1" height="1" fill="#cbc68d"/><rect x="6" y="21" width="1" height="1" fill="#c8d4aa"/><rect x="7" y="21" width="1" height="1" fill="#c8d4aa"/><rect x="8" y="21" width="1" height="1" fill="#cbc68d"/><rect x="9" y="21" width="1" height="1" fill="#cbc68d"/><rect x="16" y="21" width="1" height="1" fill="#c8d4aa"/><rect x="17" y="21" width="1" height="1" fill="#c8d4aa"/><rect x="22" y="21" width="1" height="1" fill="#c8d4aa"/><rect x="23" y="21" width="1" height="1" fill="#c8d4aa"/><rect x="24" y="21" width="1" height="1" fill="#c8d4aa"/><rect x="25" y="21" width="1" height="1" fill="#c8d4aa"/><rect x="26" y="21" width="1" height="1" fill="#cbc68d"/><rect x="27" y="21" width="1" height="1" fill="#cbc68d"/><rect x="6" y="22" width="1" height="1" fill="#cbc68d"/><rect x="7" y="22" width="1" height="1" fill="#cbc68d"/><rect x="8" y="22" width="1" height="1" fill="#cab16e"/><rect x="9" y="22" width="1" height="1" fill="#cab16e"/><rect x="14" y="22" width="1" height="1" fill="#c8d4aa"/><rect x="15" y="22" width="1" height="1" fill="#c8d4aa"/><rect x="16" y="22" width="1" height="1" fill="#cbc68d"/><rect x="17" y="22" width="1" height="1" fill="#cbc68d"/><rect x="22" y="22" width="1" height="1" fill="#cbc68d"/><rect x="23" y="22" width="1" height="1" fill="#cbc68d"/><rect x="24" y="22" width="1" height="1" fill="#cab16e"/><rect x="25" y="22" width="1" height="1" fill="#cab16e"/><rect x="6" y="23" width="1" height="1" fill="#cbc68d"/><rect x="7" y="23" width="1" height="1" fill="#cbc68d"/><rect x="8" y="23" width="1" height="1" fill="#cab16e"/><rect x="9" y="23" width="1" height="1" fill="#cab16e"/><rect x="14" y="23" width="1" height="1" fill="#c8d4aa"/><rect x="15" y="23" width="1" height="1" fill="#c8d4aa"/><rect x="16" y="23" width="1" height="1" fill="#cbc68d"/><rect x="17" y="23" width="1" height="1" fill="#cbc68d"/><rect x="22" y="23" width="1" height="1" fill="#cbc68d"/><rect x="23" y="23" width="1" height="1" fill="#cbc68d"/><rect x="24" y="23" width="1" height="1" fill="#cab16e"/><rect x="25" y="23" width="1" height="1" fill="#cab16e"/><rect x="14" y="24" width="1" height="1" fill="#cbc68d"/><rect x="15" y="24" width="1" height="1" fill="#cbc68d"/><rect x="16" y="24" width="1" height="1" fill="#cab16e"/><rect x="17" y="24" width="1" height="1" fill="#cab16e"/><rect x="14" y="25" width="1" height="1" fill="#cbc68d"/><rect x="15" y="25" width="1" height="1" fill="#cbc68d"/><rect x="16" y="25" width="1" height="1" fill="#cab16e"/><rect x="17" y="25" width="1" height="1" fill="#cab16e"/>` }} />
+    </svg>
+  );
+};
+
+// Use React.forwardRef to pass the ref down to the SVG element
+const ForwardRefComponent = React.forwardRef(PumpkinSeeds);
+
+// Add display name for better debugging in React DevTools
+ForwardRefComponent.displayName = 'PumpkinSeeds';
+
+export default ForwardRefComponent;
