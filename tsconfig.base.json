@@ -4,7 +4,7 @@
       "esModuleInterop": true,
       "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true,
-      "jsx": "react-jsx",
+      "jsx": "react",
       "target": "ES2016",
       "declaration": true,
       "declarationMap": true,
